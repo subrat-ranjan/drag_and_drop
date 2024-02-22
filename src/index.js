@@ -10,12 +10,13 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import { ChakraProvider } from '@chakra-ui/react';
 import { TouchBackend } from 'react-dnd-touch-backend';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
 
-
   <React.StrictMode>
-    <DndProvider backend={HTML5Backend}>
+    <DndProvider backend={window.innerWidth < 600 ? TouchBackend : HTML5Backend}>
       <ChakraProvider>
         <App />
       </ChakraProvider>
