@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+.burger{
+  width: 20px;
+  height: 16px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer; 
+  display: none;
+}
+.line{
+  width: 100%;
+  height: 2px;
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.responsiveModule{
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: rgb(246, 230, 230);
+  height: calc(100vh - 100px);
+  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  font-size: 36px;
+  border-radius: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.container{
+  display: flex;
+  padding: 1rem;
+  justify-content: space-evenly;
+  width: 90%;
+ 
+}
+.imageContainer{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+  overflow:scroll;
+  justify-content: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.listContainer{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
 }
+
+.imge{
+  display: flex;
+  flex-wrap: wrap;
+}
+.left{
+  flex:2;
+}
+.right{
+  flex: 2;
+}
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+   align-items: center;
+}
+h2{
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (max-width:1280px) {
+ 
+  /* .imageContainer{
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    width: 100%;
+    margin-bottom: 0;
+  } */
+  
+}
+@media screen and (max-width:1989px) {
+ 
+  .imageContainer{
+    display: flex;
+    flex-wrap: wrap;
+     justify-content: center;
+    /* align-items: center;  */
+    height: 80vh;
+    width: 100%;
+ 
+  }
+  
+}
+@media screen and (max-width:640px) {
+  .burger{
+      display: flex;
+  }
+  .link{
+      display: none;
+  }
+  .left{
+    display: none;
+  }
+  .imageContainer{
+    width: 80vw;
+    padding: 0;
+    margin: 0;
+  }
+ 
+}
+@media screen and (min-width:640px) {
+  .responsiveModule{
+    display: none;
+  }
+ 
+}
+
